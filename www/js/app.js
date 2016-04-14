@@ -8,6 +8,14 @@ angular.module('App', ['ionic'])
 		});
 
 	$urlRouterProvider.otherwise('/search');
+}) 
+
+.factory('Settings', function() {
+	var Settings = {
+		units: 'us',
+		days: 8
+	};
+	return Settings;
 })
 
 .run(function($ionicPlatform) {
