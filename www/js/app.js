@@ -22,7 +22,7 @@ angular.module('App', ['ionic'])
 	var Locations = {
 		data: [{
 			city: 'Chicago, IL, USA',
-			lat: 41.8781136,
+			lat: 41.8781136,	
 			lng: -87.6297982
 		}],
 		getIndex: function (item) {
@@ -53,6 +53,10 @@ angular.module('App', ['ionic'])
 		}
 	};
 	return Locations;
+})
+
+.controller ('LeftMenuController', function($scope, Locations) {
+	$scope.locations = Location.data;
 })
 
 .run(function($ionicPlatform) {
