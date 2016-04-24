@@ -1,4 +1,10 @@
 {
   "name": "weatherio",
-  "app_id": ""
+  "app_id": "",
+  "proxies": [
+	  {
+	  	"path": "/api/forecast",
+	  	"proxyUrl": "https://api.forecast.io/forecast/0b70de9f0747987eb96a165d07bdcbd2/"
+	  }
+  ]
 }
