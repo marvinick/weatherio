@@ -7,7 +7,7 @@ angular.module('App')
 		$scope.forecast = forecast;
 	});
 
-	var barHeight = document.getElementbyTagName('ion-header-bar')[0].clientHeight;
+	var barHeight = document.getElementsByTagName('ion-header-bar')[0].clientHeight;
 	$scope.getWidth = function () {
 		return window.innerWidth + 'px';
 	};
