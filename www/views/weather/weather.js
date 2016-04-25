@@ -43,4 +43,25 @@ angular.module('App')
 			}
 		});
 	};
+
+	$scope.showModal = function() {
+		if ($scope.modal) {
+			$scope.modal.show();
+		} else {
+			$ionicModal.fromTemplateUrl('views/weather/modal-chart.html', {
+				scope: $scope
+			}).then(function (modal) {
+				$scope.modal = modal;
+				$scope.modal.show();
+			});
+		}
+	};
+
+	$scope.hidaModal = function() {
+		$scope.modal.hide();
+	};
+
+	$scope.$on('$destroy', function() {
+		$scope.modal.remove();
+	});
 });
